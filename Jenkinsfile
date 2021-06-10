@@ -3,7 +3,6 @@ pipeline {
     tools {
       maven 'maven3.8'
       jdk 'jdk11'
-      ansible 'ansible2'
     }
     stages {
         stage('Clean') {
