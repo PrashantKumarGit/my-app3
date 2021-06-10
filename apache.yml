@@ -1,0 +1,17 @@
+---
+- host: webserver
+  become: True
+  tasks:
+    - name: Install package
+      yum:
+        name: "httpd"
+        state: "present"
+    - name: start services
+      service:
+        name: httpd
+        state: started
+        enabled: True
+    - name: Deploy war
+      copy:
+        src: my-app3-project/target/my-app-1.0-SNAPSHOT.jar
+        dest: /var/www/html
