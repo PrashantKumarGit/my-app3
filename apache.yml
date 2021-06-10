@@ -13,5 +13,5 @@
         enabled: True
     - name: Deploy war
       copy:
-        src: */target/my-app-1.0-SNAPSHOT.jar
+        src: /var/lib/jenkins/workspace/my-app3-project/target/
         dest: /var/www/html
